@@ -22,15 +22,19 @@
     var CONFIG = {"hostname":"isfk.com.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="isfk.com.cn">
-<meta property="og:url" content="https://isfk.com.cn/archives/2020/index.html">
+  <meta name="description" content="zsh 笔记安装一说 zsh 就离不开 oh-my-zsh, 别问为啥，装就对了 12# https:&#x2F;&#x2F;ohmyz.sh&#x2F;#installsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;  插件1234567# cd ~&#x2F;.oh-my-zsh&#x2F;plugins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zsh">
+<meta property="og:url" content="https://isfk.com.cn/2020/08/31/zsh/index.html">
 <meta property="og:site_name" content="isfk.com.cn">
+<meta property="og:description" content="zsh 笔记安装一说 zsh 就离不开 oh-my-zsh, 别问为啥，装就对了 12# https:&#x2F;&#x2F;ohmyz.sh&#x2F;#installsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&quot;  插件1234567# cd ~&#x2F;.oh-my-zsh&#x2F;plugins">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-31T10:28:36.000Z">
+<meta property="article:modified_time" content="2020-08-31T02:36:45.852Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://isfk.com.cn/archives/2020/">
+<link rel="canonical" href="https://isfk.com.cn/2020/08/31/zsh/">
 
 
 <script class="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | isfk.com.cn</title>
+  <title>zsh | isfk.com.cn</title>
   
 
 
@@ -133,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,6 +149,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zsh-%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">zsh 笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">插件</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -188,70 +193,79 @@
       <div class="main-inner">
         
 
-        <div class="content archive">
+        <div class="content post posts-expand">
           
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://isfk.com.cn/2020/08/31/zsh/">
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="isfk.com.cn">
+    </span>
+
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          zsh
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-31 10:28:36 / 修改时间：02:36:45" itemprop="dateCreated datePublished" datetime="2020-08-31T10:28:36+00:00">2020-08-31</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="zsh-笔记"><a href="#zsh-笔记" class="headerlink" title="zsh 笔记"></a>zsh 笔记</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>一说 <code>zsh</code> 就离不开 <code>oh-my-zsh</code>, 别问为啥，装就对了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># https://ohmyz.sh/#install</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd ~/.oh-my-zsh/plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line"><span class="comment"># vim ~/.zshrc</span></span><br><span class="line">plugins=(git vscode zsh-autosuggestions zsh-syntax-highlighting)</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-08-31T10:28:36+00:00"
-              content="2020-08-31">
-          08-31
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/08/31/zsh/" itemprop="url">
-            <span itemprop="name">zsh</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-08-31T02:36:45+00:00"
-              content="2020-08-31">
-          08-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/08/31/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/31/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
