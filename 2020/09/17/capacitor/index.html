@@ -22,28 +22,32 @@
     var CONFIG = {"hostname":"isfk.com.cn","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="isfk.com.cn">
-<meta property="og:url" content="https://isfk.com.cn/index.html">
+  <meta name="description" content="capacitor 是什么？(机译)capacitor：Web应用的跨平台本地运行时 Capacitor是一个跨平台的本机运行时，可轻松构建可在iOS，Android和Web上本机运行的Web应用程序。代表混合应用程序的下一个发展，它为希望构建Web优先应用程序的团队提供了一种现代的本机容器方法，这些应用程序在需要时可以完全访问本机SDK vant 是什么？（自述）vant 是一套基于vue的移动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用capacitor+vue+vant开发一个App">
+<meta property="og:url" content="https://isfk.com.cn/2020/09/17/capacitor/index.html">
 <meta property="og:site_name" content="isfk.com.cn">
+<meta property="og:description" content="capacitor 是什么？(机译)capacitor：Web应用的跨平台本地运行时 Capacitor是一个跨平台的本机运行时，可轻松构建可在iOS，Android和Web上本机运行的Web应用程序。代表混合应用程序的下一个发展，它为希望构建Web优先应用程序的团队提供了一种现代的本机容器方法，这些应用程序在需要时可以完全访问本机SDK vant 是什么？（自述）vant 是一套基于vue的移动">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-17T09:18:15.000Z">
+<meta property="article:modified_time" content="2020-09-17T01:31:45.949Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://isfk.com.cn/">
+<link rel="canonical" href="https://isfk.com.cn/2020/09/17/capacitor/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>isfk.com.cn</title>
+  <title>使用capacitor+vue+vant开发一个App | isfk.com.cn</title>
   
 
 
@@ -133,7 +137,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,6 +149,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#capacitor-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-%E6%9C%BA%E8%AF%91"><span class="nav-number">1.</span> <span class="nav-text">capacitor 是什么？(机译)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vant-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%88%E8%87%AA%E8%BF%B0%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">vant 是什么？（自述）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.</span> <span class="nav-text">初始化一个项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-vant"><span class="nav-number">3.1.</span> <span class="nav-text">安装 vant</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90-capacitor"><span class="nav-number">3.2.</span> <span class="nav-text">集成 capacitor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-anroid-%E7%AB%AF%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.</span> <span class="nav-text">自动生成 anroid 端代码</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -188,9 +193,10 @@
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -208,10 +214,9 @@
 
     
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/17/capacitor/" class="post-title-link" itemprop="url">使用capacitor+vue+vant开发一个App</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          使用capacitor+vue+vant开发一个App
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -233,7 +238,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="capacitor-是什么？-机译"><a href="#capacitor-是什么？-机译" class="headerlink" title="capacitor 是什么？(机译)"></a>capacitor 是什么？(机译)</h2><p>capacitor：Web应用的跨平台本地运行时</p>
+        <h2 id="capacitor-是什么？-机译"><a href="#capacitor-是什么？-机译" class="headerlink" title="capacitor 是什么？(机译)"></a>capacitor 是什么？(机译)</h2><p>capacitor：Web应用的跨平台本地运行时</p>
 <p>Capacitor是一个跨平台的本机运行时，可轻松构建可在iOS，Android和Web上本机运行的Web应用程序。代表混合应用程序的下一个发展，它为希望构建Web优先应用程序的团队提供了一种现代的本机容器方法，这些应用程序在需要时可以完全访问本机SDK</p>
 <h2 id="vant-是什么？（自述）"><a href="#vant-是什么？（自述）" class="headerlink" title="vant 是什么？（自述）"></a>vant 是什么？（自述）</h2><p>vant 是一套基于vue的移动端UI组件</p>
 <h2 id="初始化一个项目"><a href="#初始化一个项目" class="headerlink" title="初始化一个项目"></a>初始化一个项目</h2><p>我们使用最新的 vue3预览版进行测试</p>
@@ -244,226 +249,30 @@
 <h3 id="集成-capacitor"><a href="#集成-capacitor" class="headerlink" title="集成 capacitor"></a>集成 capacitor</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm install @capacitor/core @capacitor/cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化</span></span><br><span class="line">npx <span class="built_in">cap</span> init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改 capacitor.config.json webDir =&gt; &quot;dist&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态代码 到 dist 目录（默认的）</span></span><br><span class="line">yarn build</span><br></pre></td></tr></table></figure>
 
 <h3 id="自动生成-anroid-端代码"><a href="#自动生成-anroid-端代码" class="headerlink" title="自动生成 anroid 端代码"></a>自动生成 anroid 端代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加安卓端</span></span><br><span class="line">npx <span class="built_in">cap</span> add android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果修改了代码可以执行 将编译后的 dist 复制到安卓端</span></span><br><span class="line">npx <span class="built_in">cap</span> copy</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://isfk.com.cn/2020/09/17/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="isfk.com.cn">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-17 01:31:45" itemprop="dateCreated datePublished" datetime="2020-09-17T01:31:45+00:00">2020-09-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/17/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://isfk.com.cn/2020/09/04/flutter-adb-wifi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="isfk.com.cn">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/04/flutter-adb-wifi/" class="post-title-link" itemprop="url">flutter无线（WIFI）调试真机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-04 16:21:56" itemprop="dateCreated datePublished" datetime="2020-09-04T16:21:56+00:00">2020-09-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-17 01:31:45" itemprop="dateModified" datetime="2020-09-17T01:31:45+00:00">2020-09-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="mac-安装-adb"><a href="#mac-安装-adb" class="headerlink" title="mac 安装 adb"></a>mac 安装 adb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install android-platform-tools</span><br></pre></td></tr></table></figure>
-
-<h2 id="连接真机，设置无线"><a href="#连接真机，设置无线" class="headerlink" title="连接真机，设置无线"></a>连接真机，设置无线</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看连接</span></span><br><span class="line">$ adb devices</span><br><span class="line">List of devices attached</span><br><span class="line">MQS0219912008017	device</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置端口号 adb tcpip 8888</span></span><br><span class="line">adb -s MQS0219912008017 tcpip 8888</span><br><span class="line"></span><br><span class="line"><span class="comment"># 连接（进入手机查看wifi连接）</span></span><br><span class="line">adb connect 192.168.0.140:8888</span><br></pre></td></tr></table></figure>
-
-<h2 id="run"><a href="#run" class="headerlink" title="run"></a>run</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter run</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://isfk.com.cn/2020/08/31/zsh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="isfk.com.cn">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/31/zsh/" class="post-title-link" itemprop="url">zsh</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-31 10:28:36" itemprop="dateCreated datePublished" datetime="2020-08-31T10:28:36+00:00">2020-08-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-17 01:31:45" itemprop="dateModified" datetime="2020-09-17T01:31:45+00:00">2020-09-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="zsh-笔记"><a href="#zsh-笔记" class="headerlink" title="zsh 笔记"></a>zsh 笔记</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>一说 <code>zsh</code> 就离不开 <code>oh-my-zsh</code>, 别问为啥，装就对了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># https://ohmyz.sh/#install</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd ~/.oh-my-zsh/plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git</span><br><span class="line"><span class="comment"># vim ~/.zshrc</span></span><br><span class="line">plugins=(git vscode zsh-autosuggestions zsh-syntax-highlighting)</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
