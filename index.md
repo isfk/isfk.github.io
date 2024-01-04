@@ -7,7 +7,7 @@
 
 - [影视仓](https://pan.xunlei.com/s/VNmUhSiajcovKsMCvoWS2FBcA1?pwd=rxcs#) 、
 - 公众号 *安卓哥开发*
-- [奇奇老友汇-多版下载-本密:5963|蜂密:7365|奇密:3532](https://qiqi2020.lanzouq.com/b09svqv1c)
+- [奇奇老友汇-多版下载-本密:5963/蜂密:7365/奇密:3532](https://qiqi2020.lanzouq.com/b09svqv1c)
 
 > 无论`影视仓`还是`catbox` 都是基于 `tvbox`二次开发的
 >
