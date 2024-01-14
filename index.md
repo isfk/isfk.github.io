@@ -52,4 +52,5 @@
 
 ## 漫画
 - [tachiyomi](https://github.com/tachiyomiorg/tachiyomi)
-> https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json 
+- [extensions](https://github.com/keiyoushi/extensions)
+> 仓库 https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json
