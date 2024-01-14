@@ -49,3 +49,7 @@
 ### 小说文库
 
 - [Github](https://github.com/zsakvo/wenku8x)
+
+## 漫画
+- [tachiyomi](https://github.com/tachiyomiorg/tachiyomi)
+> https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json 
